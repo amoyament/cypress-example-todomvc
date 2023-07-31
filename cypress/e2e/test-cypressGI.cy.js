@@ -19,7 +19,7 @@ context("Sholud mark all items as completed", function () {
     cy.createDefaultTodos().as("todos");
   });
 
-  it("should allow me to mark all items as completed", function () {
+  it("Should allow all items to be marked as completed", function () {
     cy.get(".toggle-all").check();
     cy.get("@todos").eq(0).should("have.class", "completed");
     cy.get("@todos").eq(1).should("have.class", "completed");
