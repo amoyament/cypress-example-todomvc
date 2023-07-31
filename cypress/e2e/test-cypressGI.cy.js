@@ -7,14 +7,14 @@ describe("Testing todo app for GI", () => {
     cy.visit("http://localhost:8888/#/");
   });
 
-  it("displays items", () => {
+  it("App should display new items", () => {
     cy.get(".new-todo").type(toDoItem1).type("{enter}");
     cy.get(".new-todo").type(toDoItem2).type("{enter}");
     cy.get(".new-todo").type(toDoItem3).type("{enter}");
   });
 });
 
-context("Mark all as completed", function () {
+context("Sholud mark all items as completed", function () {
   beforeEach(function () {
     cy.createDefaultTodos().as("todos");
   });
